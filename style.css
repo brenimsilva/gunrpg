@@ -1,0 +1,18 @@
+#attack {
+  user-select: none;
+  cursor: pointer;
+  width: 50px;
+}
+
+#attack:active {
+  background-color: yellow;
+}
+
+#info {
+  color: yellowgreen;
+  background-color: #333;
+}
+
+.weaponOptions {
+  background-color: #333;
+}
