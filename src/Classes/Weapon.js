@@ -1,10 +1,11 @@
 export default class Weapon {
-  constructor(name, damage, bodyPart, type, rarity) {
+  constructor(id, name, damage, bodyPart, type, rarity) {
     this.name = name;
     this.damage = damage;
     this.bodyPart = bodyPart;
     this.type = type;
     this.rarity = rarity;
+    this.id = id;
   }
 
   getData() {
