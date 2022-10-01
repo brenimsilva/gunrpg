@@ -15,8 +15,6 @@ human.initiateInventory(weapons);
 
 mobStats.mobHp.innerText = mobStats.mobHpInt;
 
-console.log(Object.keys(human.equipments.weapon).length === 0);
-
 const commands = {
   attackBtn: document.getElementById("attack"),
   attack: function (mob, damage) {
