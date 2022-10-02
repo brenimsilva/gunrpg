@@ -1,6 +1,8 @@
-export default class Weapon {
+import Item from "./Item";
+
+export default class Weapon extends Item {
   constructor(id, name, damage, bodyPart, type, rarity) {
-    this.name = name;
+    super(id, name);
     this.damage = damage;
     this.bodyPart = bodyPart;
     this.type = type;

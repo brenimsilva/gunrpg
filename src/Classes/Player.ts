@@ -1,3 +1,5 @@
+import HTMLElements from "./HTMLElements";
+import Item from "./Item";
 export default class Player {
   id: Number;
   name: String;
@@ -5,26 +7,26 @@ export default class Player {
   HP: Number;
   baseATK: Number;
   baseDEF: Number;
+  AtributePoints: Number;
+  PercPoints: Number;
   equipments: Object;
-  inventory: Array<Object>;
+  inventory: Array<Item>;
   extraAtributes: Object;
   percs: Array<Object>;
   initiateInventory: Function;
-
-  HTML_HP: HTMLAllCollection;
-  HTML_INFO: HTMLAllCollection;
-  HTML_SELECT: HTMLAllCollection;
-  HTML_NAME: HTMLAllCollection;
-  HTML_INVENTORY: HTMLAllCollection;
+  HTMLElements: HTMLElements;
 
   constructor(
-    ID: Number,
+    id: Number,
     name: String,
     baseHP: Number,
     baseATK: Number,
-    baseDEF: Number
+    baseDEF: Number,
+    HTMLElements: HTMLElements
   ) {
-    this.id = ID;
+    this.AtributePoints = 0;
+    this.PercPoints = 0;
+    this.id = id;
     this.name = name;
     this.baseHP = baseHP;
     this.HP = baseHP;
@@ -50,27 +52,11 @@ export default class Player {
     this.percs = [];
 
     //HTML Elements
-    this.HTML_HP;
-    this.HTML_INFO;
-    this.HTML_SELECT;
-    this.HTML_NAME;
-    this.HTML_INVENTORY;
+    this.HTMLElements = HTMLElements;
 
     //Methods
-    this.initiateInventory = function (items) {
+    this.initiateInventory = function (items: Array<Item>) {
       this.inventory = [...items];
     };
   }
 }
-
-// const playerStats = {
-//   playerHp: 20,
-//   playerAtk: 1,
-//   playerDef: 1,
-//   playerEquipments: {
-//     weapon: {},
-//     armor: {},
-//     shield: {},
-//   },
-//   playerInventory: [...weapons],
-// };
