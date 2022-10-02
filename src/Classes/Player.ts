@@ -2,8 +2,8 @@ import HTMLElements from "./HTMLElements.js";
 import Item from "./Item.js";
 import Utilitario from "./Utilitario.js";
 export default class Player {
-  readonly id: string;
-  readonly name: string;
+  id: string;
+  name: string;
   baseHP: number;
   HP: number;
   baseATK: number;
@@ -15,14 +15,16 @@ export default class Player {
   extraAtributes: Object;
   percs: Array<Object>;
   initiateInventory: Function;
-  readonly HTMLElements: HTMLElements;
+  human: boolean;
+  HTMLElements: HTMLElements;
   constructor(
     name: string,
     baseHP: number,
     baseATK: number,
     baseDEF: number,
-    HTMLElements: HTMLElements
+    human: boolean
   ) {
+    this.human = human;
     this.AtributePoints = 0;
     this.PercPoints = 0;
     this.name = name;
@@ -31,6 +33,7 @@ export default class Player {
     this.HP = baseHP;
     this.baseDEF = baseDEF;
     this.baseATK = baseATK;
+    console.log(this.id);
 
     //Items
     this.equipments = {
@@ -51,7 +54,7 @@ export default class Player {
     this.percs = [];
 
     //HTML Elements
-    this.HTMLElements = HTMLElements;
+    this.HTMLElements = new HTMLElements(this.human);
 
     //Methods
     this.initiateInventory = function (items: Array<Item>) {

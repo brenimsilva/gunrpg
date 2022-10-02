@@ -1,6 +1,8 @@
+import HTMLElements from "./HTMLElements.js";
 import Utilitario from "./Utilitario.js";
 export default class Player {
-    constructor(name, baseHP, baseATK, baseDEF, HTMLElements) {
+    constructor(name, baseHP, baseATK, baseDEF, human) {
+        this.human = human;
         this.AtributePoints = 0;
         this.PercPoints = 0;
         this.name = name;
@@ -9,6 +11,7 @@ export default class Player {
         this.HP = baseHP;
         this.baseDEF = baseDEF;
         this.baseATK = baseATK;
+        console.log(this.id);
         //Items
         this.equipments = {
             weapon: {},
@@ -26,7 +29,7 @@ export default class Player {
         };
         this.percs = [];
         //HTML Elements
-        this.HTMLElements = HTMLElements;
+        this.HTMLElements = new HTMLElements(this.human);
         //Methods
         this.initiateInventory = function (items) {
             this.inventory = [...items];

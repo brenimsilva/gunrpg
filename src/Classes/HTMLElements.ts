@@ -1,26 +1,28 @@
 export default class HTMLElements {
-  readonly HP: HTMLElement;
-  readonly AP: HTMLElement;
-  readonly PP: HTMLElement;
-  readonly Inventory: HTMLElement;
-  readonly Gold: HTMLElement;
-  readonly Exp: HTMLElement;
-  readonly Lvl: HTMLElement;
-  constructor(
-    HP: HTMLElement,
-    AP: HTMLElement,
-    PP: HTMLElement,
-    Inventory: HTMLElement,
-    Gold: HTMLElement,
-    Exp: HTMLElement,
-    Lvl: HTMLElement
-  ) {
-    this.HP = HP;
-    this.AP = AP;
-    this.PP = PP;
-    this.Inventory = Inventory;
-    this.Gold = Gold;
-    this.Exp = Exp;
-    this.Lvl = Lvl;
+  readonly HP: HTMLElement | null;
+  readonly AP: HTMLElement | null;
+  readonly PP: HTMLElement | null;
+  readonly Inventory: HTMLElement | null;
+  readonly Gold: HTMLElement | null;
+  readonly Exp: HTMLElement | null;
+  readonly Lvl: HTMLElement | null;
+  constructor(human: boolean) {
+    if (human) {
+      this.HP = document.getElementById("");
+      this.AP = document.getElementById("");
+      this.PP = document.getElementById("");
+      this.Inventory = document.getElementById("");
+      this.Gold = document.getElementById("");
+      this.Exp = document.getElementById("");
+      this.Lvl = document.getElementById("");
+    } else {
+      this.HP = document.getElementById("");
+      this.AP = document.getElementById("");
+      this.PP = document.getElementById("");
+      this.Inventory = document.getElementById("");
+      this.Gold = document.getElementById("");
+      this.Exp = document.getElementById("");
+      this.Lvl = document.getElementById("");
+    }
   }
 }

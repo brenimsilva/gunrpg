@@ -10,7 +10,7 @@ const mobStats = {
   mobHpInt: 20,
 };
 mobStats.mobHpInt = Math.floor(Math.random() * 30) + 5;
-const human = new Player(Utilitario.generateID(), "Breno", 20, 1, 1);
+const human = new Player("Breno", 20, 1, 1, document.createElement("div"));
 human.initiateInventory(weapons);
 
 mobStats.mobHp.innerText = mobStats.mobHpInt;

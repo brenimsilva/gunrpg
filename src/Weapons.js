@@ -9,7 +9,9 @@ export const weapons = [
     2,
     "WEAPON",
     "PISTOL",
-    rarities[0]
+    rarities[0],
+    0,
+    10
   ),
   new Weapon(
     Utilitario.generateID(),
@@ -17,7 +19,9 @@ export const weapons = [
     3,
     "WEAPON",
     "PISTOL",
-    rarities[1]
+    rarities[1],
+    0,
+    10
   ),
   new Weapon(
     Utilitario.generateID(),
@@ -25,7 +29,9 @@ export const weapons = [
     5,
     "WEAPON",
     "PISTOL",
-    rarities[2]
+    rarities[2],
+    0,
+    10
   ),
   new Weapon(
     Utilitario.generateID(),
@@ -33,7 +39,9 @@ export const weapons = [
     8,
     "WEAPON",
     "PISTOL",
-    rarities[3]
+    rarities[3],
+    0,
+    10
   ),
   new Weapon(
     Utilitario.generateID(),
@@ -41,7 +49,9 @@ export const weapons = [
     15,
     "WEAPON",
     "PISTOL",
-    rarities[4]
+    rarities[4],
+    0,
+    10
   ),
   new Weapon(
     Utilitario.generateID(),
@@ -49,7 +59,9 @@ export const weapons = [
     15,
     "WEAPON",
     "PISTOL",
-    rarities[4]
+    rarities[4],
+    0,
+    10
   ),
   new Weapon(
     Utilitario.generateID(),
@@ -57,7 +69,9 @@ export const weapons = [
     15,
     "WEAPON",
     "PISTOL",
-    rarities[4]
+    rarities[4],
+    0,
+    10
   ),
   new Weapon(
     Utilitario.generateID(),
@@ -65,7 +79,9 @@ export const weapons = [
     30,
     "WEAPON",
     "PISTOL",
-    rarities[5]
+    rarities[5],
+    0,
+    10
   ),
   new Weapon(Utilitario.generateID(), "SMG", 3, "WEAPON", "SMG", rarities[0]),
   new Weapon(
@@ -74,6 +90,8 @@ export const weapons = [
     1,
     "WEAPON",
     "BLADE",
-    rarities[0]
+    rarities[0],
+    0,
+    10
   ),
 ];
