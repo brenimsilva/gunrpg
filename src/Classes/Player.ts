@@ -1,8 +1,9 @@
-import HTMLElements from "./HTMLElements";
-import Item from "./Item";
+import HTMLElements from "./HTMLElements.js";
+import Item from "./Item.js";
+import Utilitario from "./Utilitario.js";
 export default class Player {
-  id: number;
-  name: string;
+  readonly id: string;
+  readonly name: string;
   baseHP: number;
   HP: number;
   baseATK: number;
@@ -14,10 +15,8 @@ export default class Player {
   extraAtributes: Object;
   percs: Array<Object>;
   initiateInventory: Function;
-  HTMLElements: HTMLElements;
-
+  readonly HTMLElements: HTMLElements;
   constructor(
-    id: number,
     name: string,
     baseHP: number,
     baseATK: number,
@@ -26,8 +25,8 @@ export default class Player {
   ) {
     this.AtributePoints = 0;
     this.PercPoints = 0;
-    this.id = id;
     this.name = name;
+    this.id = Utilitario.generateID("P", this.name.slice(0, 1));
     this.baseHP = baseHP;
     this.HP = baseHP;
     this.baseDEF = baseDEF;

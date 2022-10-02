@@ -1,9 +1,10 @@
+import Utilitario from "./Utilitario.js";
 export default class Player {
-    constructor(id, name, baseHP, baseATK, baseDEF, HTMLElements) {
+    constructor(name, baseHP, baseATK, baseDEF, HTMLElements) {
         this.AtributePoints = 0;
         this.PercPoints = 0;
-        this.id = id;
         this.name = name;
+        this.id = Utilitario.generateID("P", this.name.slice(0, 1));
         this.baseHP = baseHP;
         this.HP = baseHP;
         this.baseDEF = baseDEF;

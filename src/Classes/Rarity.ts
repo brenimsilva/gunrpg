@@ -1,9 +1,9 @@
-import Utilitario from "./Utilitario";
+import Utilitario from "./Utilitario.js";
 
 export default class Rarity {
-  id: string;
-  name: string;
-  color: string;
+  readonly id: string;
+  readonly name: string;
+  readonly color: string;
   constructor(name: string, color: string) {
     this.name = name;
     this.id = Utilitario.generateID("R", this.name.slice(0));

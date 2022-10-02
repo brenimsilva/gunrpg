@@ -1,11 +1,11 @@
 export default class HTMLElements {
-  HP: HTMLElement;
-  AP: HTMLElement;
-  PP: HTMLElement;
-  Inventory: HTMLElement;
-  Gold: HTMLElement;
-  Exp: HTMLElement;
-  Lvl: HTMLElement;
+  readonly HP: HTMLElement;
+  readonly AP: HTMLElement;
+  readonly PP: HTMLElement;
+  readonly Inventory: HTMLElement;
+  readonly Gold: HTMLElement;
+  readonly Exp: HTMLElement;
+  readonly Lvl: HTMLElement;
   constructor(
     HP: HTMLElement,
     AP: HTMLElement,
