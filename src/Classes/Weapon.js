@@ -1,4 +1,4 @@
-import Item from "./Item";
+import Item from "./Item.js";
 
 export default class Weapon extends Item {
   constructor(id, name, damage, bodyPart, type, rarity) {

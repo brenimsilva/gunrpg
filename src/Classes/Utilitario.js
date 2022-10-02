@@ -1,11 +1,8 @@
-function Utilitario() {
-  this.id = 0;
-  this.generateID = function () {
-    this.id += 1;
-    return this.id;
-  };
+export default class Utilitario {
+    static generateID(prefix, sufix) {
+        this.id += 1;
+        let uniqueId = `${prefix}${this.id}${sufix}`;
+        return uniqueId;
+    }
 }
-
-const util = new Utilitario();
-
-export { util };
+Utilitario.id = 0;

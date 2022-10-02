@@ -1,14 +1,14 @@
 import HTMLElements from "./HTMLElements";
 import Item from "./Item";
 export default class Player {
-  id: Number;
-  name: String;
-  baseHP: Number;
-  HP: Number;
-  baseATK: Number;
-  baseDEF: Number;
-  AtributePoints: Number;
-  PercPoints: Number;
+  id: number;
+  name: string;
+  baseHP: number;
+  HP: number;
+  baseATK: number;
+  baseDEF: number;
+  AtributePoints: number;
+  PercPoints: number;
   equipments: Object;
   inventory: Array<Item>;
   extraAtributes: Object;
@@ -17,11 +17,11 @@ export default class Player {
   HTMLElements: HTMLElements;
 
   constructor(
-    id: Number,
-    name: String,
-    baseHP: Number,
-    baseATK: Number,
-    baseDEF: Number,
+    id: number,
+    name: string,
+    baseHP: number,
+    baseATK: number,
+    baseDEF: number,
     HTMLElements: HTMLElements
   ) {
     this.AtributePoints = 0;
