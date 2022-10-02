@@ -2,7 +2,7 @@
 import { weapons } from "./src/Weapons.js";
 import { weaponSelect } from "./src/HtmlElements.js";
 import { info } from "./src/HtmlElements.js";
-import { util } from "./src/Classes/Utilitario.js";
+import Utilitario from "./src/Classes/Utilitario.js";
 import Player from "./src/Classes/Player.js";
 
 const mobStats = {
@@ -10,7 +10,7 @@ const mobStats = {
   mobHpInt: 20,
 };
 mobStats.mobHpInt = Math.floor(Math.random() * 30) + 5;
-const human = new Player(util.generateID(), "Breno", 20, 1, 1);
+const human = new Player("Breno", 20, 1, 1, document.createElement("div"));
 human.initiateInventory(weapons);
 
 mobStats.mobHp.innerText = mobStats.mobHpInt;

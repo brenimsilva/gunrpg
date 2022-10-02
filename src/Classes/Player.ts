@@ -1,35 +1,39 @@
+import HTMLElements from "./HTMLElements.js";
+import Item from "./Item.js";
+import Utilitario from "./Utilitario.js";
 export default class Player {
-  id: Number;
-  name: String;
-  baseHP: Number;
-  HP: Number;
-  baseATK: Number;
-  baseDEF: Number;
+  id: string;
+  name: string;
+  baseHP: number;
+  HP: number;
+  baseATK: number;
+  baseDEF: number;
+  AtributePoints: number;
+  PercPoints: number;
   equipments: Object;
-  inventory: Array<Object>;
+  inventory: Array<Item>;
   extraAtributes: Object;
   percs: Array<Object>;
   initiateInventory: Function;
-
-  HTML_HP: HTMLAllCollection;
-  HTML_INFO: HTMLAllCollection;
-  HTML_SELECT: HTMLAllCollection;
-  HTML_NAME: HTMLAllCollection;
-  HTML_INVENTORY: HTMLAllCollection;
-
+  human: boolean;
+  HTMLElements: HTMLElements;
   constructor(
-    ID: Number,
-    name: String,
-    baseHP: Number,
-    baseATK: Number,
-    baseDEF: Number
+    name: string,
+    baseHP: number,
+    baseATK: number,
+    baseDEF: number,
+    human: boolean
   ) {
-    this.id = ID;
+    this.human = human;
+    this.AtributePoints = 0;
+    this.PercPoints = 0;
     this.name = name;
+    this.id = Utilitario.generateID("P", this.name.slice(0, 1));
     this.baseHP = baseHP;
     this.HP = baseHP;
     this.baseDEF = baseDEF;
     this.baseATK = baseATK;
+    console.log(this.id);
 
     //Items
     this.equipments = {
@@ -50,27 +54,11 @@ export default class Player {
     this.percs = [];
 
     //HTML Elements
-    this.HTML_HP;
-    this.HTML_INFO;
-    this.HTML_SELECT;
-    this.HTML_NAME;
-    this.HTML_INVENTORY;
+    this.HTMLElements = new HTMLElements(this.human);
 
     //Methods
-    this.initiateInventory = function (items) {
+    this.initiateInventory = function (items: Array<Item>) {
       this.inventory = [...items];
     };
   }
 }
-
-// const playerStats = {
-//   playerHp: 20,
-//   playerAtk: 1,
-//   playerDef: 1,
-//   playerEquipments: {
-//     weapon: {},
-//     armor: {},
-//     shield: {},
-//   },
-//   playerInventory: [...weapons],
-// };
