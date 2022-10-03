@@ -6,7 +6,7 @@ export default class Rarity {
   color: string;
   constructor(name: string, color: string) {
     this.name = name;
-    this.id = Utilitario.generateID("R", this.name.slice(0));
+    this.id = Utilitario.generateID("R", this.name.slice(0, 1));
     this.color = color;
   }
 }

@@ -11,7 +11,6 @@ export default class Player {
         this.HP = baseHP;
         this.baseDEF = baseDEF;
         this.baseATK = baseATK;
-        console.log(this.id);
         //Items
         this.equipments = {
             weapon: {},
