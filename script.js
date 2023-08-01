@@ -82,3 +82,5 @@ weaponSelect.addEventListener("change", (e) => {
   updatePlayerWeapon(human.equipments, e.target.value);
 });
 updatePlayerWeapon(human.equipments, weaponSelect.value);
+
+amor te amo
